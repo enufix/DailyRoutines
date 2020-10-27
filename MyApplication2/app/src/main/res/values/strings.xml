@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="DailyRoutines">Дневни Рутини</string>
+    <string name="Sunshine">Day</string>
+    <string name="Moon">Night</string>
+    <string name="Settings">Settings</string>
+    <string name="Statistics">Statistics</string>
+    <string name="Reward">Reward</string>
+    <string name="ActivityHeading">Разбуди се и намести го твојот кревет</string>
+    <string name="stop_button">СТОП</string>
+    <string name="next_text">ПРОДОЛЖИ</string>
+    <string name="timer_id">timer</string>
+    <string name="next_button">next_button</string>
+    <string name="activityImage">ActivityImage</string>
+    <string name="stop_text">СТОП</string>
+    <string name="stars">stars</string>
+    <string name="girl">girl</string>
+    <string name="starsNumber">stringNumber</string>
+    <string name="elapsedTime">elapsedTime</string>
+    <string name="time_used">TIME_USED</string>
+    <string name="ToothHeading">Измиј ги твоите заби</string>
+    <string name="ToothView" type="id">ToothView</string>
+    <string name="dressUp">Облечи се за денес</string>
+</resources>
