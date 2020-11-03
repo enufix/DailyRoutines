@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FourthActivity extends AppCompatActivity{
+public class EighthActivity extends AppCompatActivity{
 
     private  ProgressBar progressBar;
     private  TextView countdown_text;
@@ -28,10 +28,11 @@ public class FourthActivity extends AppCompatActivity{
 
     int i=0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fourth);
+        setContentView(R.layout.activity_eighth);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
@@ -103,7 +104,6 @@ public class FourthActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Intent act2 = new Intent(view.getContext(), ThirdActivity.class);
                 act2.putExtra("TIME_USED", 600000 - timeLeftInMilliSeconds);
-                act2.putExtra("Key","DataFifth");
                 startActivity(act2);
             }
         });
@@ -117,8 +117,8 @@ public class FourthActivity extends AppCompatActivity{
                 startActivity(act3);
             }
         });
-    }
 
+    }
 
     public void updateTimer() {
 
@@ -132,5 +132,6 @@ public class FourthActivity extends AppCompatActivity{
 
         countdown_text.setText(timeLeftText);
     }
+
 }
 

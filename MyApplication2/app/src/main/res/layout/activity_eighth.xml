@@ -4,35 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatisticsActivity">
+    tools:context=".SixthActivity">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/DressUpView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/group_662"
+        android:background="@drawable/shoesbackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="234dp"
-        android:layout_height="53dp"
+        android:layout_width="194dp"
+        android:layout_height="54dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/ActivityHeading"
+        android:text="@string/ShoesOn"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.047"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/stop_button"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="@+id/DressUpView"
+        app:layout_constraintTop_toTopOf="@+id/DressUpView"
+        app:layout_constraintVertical_bias="0.422" />
 
     <ImageView
         android:id="@+id/stop_button"
@@ -40,13 +39,12 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/stop_button"
         android:src="@drawable/group_642"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.044" />
-
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/DressUpView"
+        app:layout_constraintVertical_bias="0.39" />
 
     <ImageView
         android:id="@+id/next_button"
@@ -54,12 +52,12 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/next_button"
         android:src="@drawable/group_643"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/stop_button"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintBottom_toBottomOf="@+id/DressUpView"
+        app:layout_constraintEnd_toEndOf="@+id/DressUpView"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.838" />
 
     <TextView
         android:id="@+id/stop_text"
@@ -71,10 +69,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/stop_button"
         app:layout_constraintEnd_toEndOf="@+id/stop_button"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="@+id/stop_button"
         app:layout_constraintTop_toTopOf="@+id/stop_button"
-        app:layout_constraintVertical_bias="0.434" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <TextView
         android:id="@+id/next_text"
@@ -86,22 +84,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/next_button"
         app:layout_constraintEnd_toEndOf="@+id/next_button"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="@+id/next_button"
-        app:layout_constraintTop_toTopOf="@+id/next_button" />
-
+        app:layout_constraintTop_toTopOf="@+id/next_button"
+        app:layout_constraintVertical_bias="0.48" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_width="350dp"
+        android:layout_height="199dp"
         android:contentDescription="@string/activityImage"
-        android:src="@drawable/group_663"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.327"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.799" />
-
+        android:src="@drawable/shoesgirl"
+        app:layout_constraintBottom_toBottomOf="@+id/DressUpView"
+        app:layout_constraintEnd_toEndOf="@+id/DressUpView"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="@+id/DressUpView"
+        app:layout_constraintTop_toTopOf="@+id/DressUpView"
+        app:layout_constraintVertical_bias="0.929" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -112,12 +111,11 @@
         android:indeterminate="true"
         android:indeterminateDrawable="@drawable/pb_drawable_1"
         android:indeterminateDuration="600000"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintStart_toStartOf="@+id/DressUpView"
+        app:layout_constraintTop_toTopOf="@+id/DressUpView"
+        app:layout_constraintVertical_bias="0.916" />
 
     <TextView
         android:id="@+id/countdown_text"
@@ -125,14 +123,15 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="50sp"
         android:textColor="#FFFFFF"
+        android:textSize="50sp"
+
         app:layout_constraintBottom_toBottomOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
         app:layout_constraintStart_toStartOf="@+id/progressBar"
         app:layout_constraintTop_toTopOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="10:00" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

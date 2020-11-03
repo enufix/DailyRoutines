@@ -30,4 +30,15 @@
     <string name="ToothHeading">Измиј ги твоите заби</string>
     <string name="ToothView" type="id">ToothView</string>
     <string name="dressUp">Облечи се за денес</string>
+    <string name="EnterName">ВНЕСИ ИМЕ</string>
+    <string name="girl_name">girl_name</string>
+    <string name="boy_name">boy_name</string>
+    <string name="back_button">back_button</string>
+    <string name="bigStar">bigStar</string>
+    <string name="StarsLeft">2 ЅВЕЗДИ ДО ТВОЈАТА НАГРАДА</string>
+    <string name="StarsCount">21 X</string>
+    <string name="StarsSum">Вие собравте 57 ѕвезди</string>
+    <string name="BreakfastTextView">Изеди го твојот доручек</string>
+    <string name="GetReadyBackPack">Спреми го твојот ранец</string>
+    <string name="ShoesOn">Облечи ги твоите обувки</string>
 </resources>

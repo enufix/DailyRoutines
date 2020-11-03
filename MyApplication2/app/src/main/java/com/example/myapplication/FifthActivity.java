@@ -28,6 +28,7 @@ public class FifthActivity extends AppCompatActivity{
 
     int i=0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -103,6 +104,7 @@ public class FifthActivity extends AppCompatActivity{
             public void onClick(View view) {
                 Intent act2 = new Intent(view.getContext(), ThirdActivity.class);
                 act2.putExtra("TIME_USED", 600000 - timeLeftInMilliSeconds);
+                act2.putExtra("Key","DataSixth");
                 startActivity(act2);
             }
         });

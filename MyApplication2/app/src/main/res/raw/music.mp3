@@ -1,0 +1,151 @@
+
+  <html>
+    <head>
+      <title>Panic</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <style>
+      html, body{ padding: 0; margin: 0; }
+      header { background: #C52F24; color: white; border-bottom: 2px solid #9C0606; }
+      h1 { padding: 10px 0; margin: 0; }
+      .container { margin: 0 20px; }
+      .error { font-size: 18px; background: #FFCCCC; color: #9C0606; padding: 10px 0; }
+      .file-info .file-name { font-weight: bold; }
+      .stack { height: 300px; overflow-y: scroll; border: 1px solid #e5e5e5; padding: 10px; }
+
+      table.source {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #e5e5e5;
+      }
+
+      table.source td {
+        padding: 0;
+      }
+
+      table.source .numbers {
+        font-size: 14px;
+        vertical-align: top;
+        width: 1%;
+        color: rgba(0,0,0,0.3);
+        text-align: right;
+      }
+
+      table.source .numbers .number {
+        display: block;
+        padding: 0 5px;
+        border-right: 1px solid #e5e5e5;
+      }
+
+      table.source .numbers .number.line-110 {
+        border-right: 1px solid #ffcccc;
+      }
+
+      table.source .numbers pre {
+        white-space: pre-wrap;
+      }
+
+      table.source .code {
+        font-size: 14px;
+        vertical-align: top;
+      }
+
+      table.source .code .line {
+        padding-left: 10px;
+        display: block;
+      }
+
+      table.source .numbers .number,
+      table.source .code .line {
+        padding-top: 1px;
+        padding-bottom: 1px;
+      }
+
+      table.source .code .line:hover {
+        background-color: #f6f6f6;
+      }
+
+      table.source .line-110,
+      table.source line-110,
+      table.source .code .line.line-110:hover {
+        background: #ffcccc;
+      }
+      </style>
+    </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Error</h1>
+      </div>
+    </header>
+
+    <div class="error">
+      <p class="container">runtime error: invalid memory address or nil pointer dereference</p>
+    </div>
+
+    <div class="container">
+      <p class="file-info">
+        In <span class="file-name">/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/ffmpeg.go:110</span></p>
+      </p>
+
+      <table class="source">
+        <tr>
+          <td class="numbers">
+            <pre></pre>
+          </td>
+          <td class="code">
+            <pre></pre>
+          </td>
+        </tr>
+      </table>
+      <h2>Stack</h2>
+      <pre class="stack">goroutine 68309 [running]:
+github.com/youtgo/vendor/github.com/gocraft/web.ShowErrorsMiddleware.func1(0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/show_errors_middleware.go:19 &#43;0x9e
+panic(0x80da20, 0xc03e40)
+	/home/john/.gvm/gos/go1.13/src/runtime/panic.go:679 &#43;0x1b2
+main.pipeThruFfmpegToMp3(0xc000236cc0, 0x948b40, 0xc00066cd80, 0x0, 0x0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/ffmpeg.go:110 &#43;0xc59
+main.(*YoutubeContext).YoutubeToMp3(0xc00066ce40, 0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/main.go:157 &#43;0x265
+reflect.Value.call(0x7fd5a0, 0x8c9298, 0x13, 0x88229c, 0x4, 0xc0006a8d70, 0x3, 0x3, 0x0, 0x1, ...)
+	/home/john/.gvm/gos/go1.13/src/reflect/value.go:460 &#43;0x5f6
+reflect.Value.Call(0x7fd5a0, 0x8c9298, 0x13, 0xc0006a8d70, 0x3, 0x3, 0xc0002ccc80, 0x1, 0x1)
+	/home/john/.gvm/gos/go1.13/src/reflect/value.go:321 &#43;0xb4
+github.com/youtgo/vendor/github.com/gocraft/web.middlewareStack.func1(0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:135 &#43;0x3a1
+main.(*YoutubeContext).SetYoutubeContext(0xc00066ce40, 0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/main.go:140 &#43;0xf9d
+reflect.Value.call(0x809a20, 0x8c9288, 0x13, 0x88229c, 0x4, 0xc000253368, 0x4, 0x4, 0x0, 0x0, ...)
+	/home/john/.gvm/gos/go1.13/src/reflect/value.go:460 &#43;0x5f6
+reflect.Value.Call(0x809a20, 0x8c9288, 0x13, 0xc000253368, 0x4, 0x4, 0x0, 0x0, 0x0)
+	/home/john/.gvm/gos/go1.13/src/reflect/value.go:321 &#43;0xb4
+github.com/youtgo/vendor/github.com/gocraft/web.(*middlewareHandler).invoke(0xc0001038c0, 0x823900, 0xc00066ce40, 0x16, 0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:155 &#43;0x26a
+github.com/youtgo/vendor/github.com/gocraft/web.middlewareStack.func1(0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:144 &#43;0x18b
+github.com/youtgo/vendor/github.com/gocraft/web.ShowErrorsMiddleware(0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/show_errors_middleware.go:25 &#43;0x95
+github.com/youtgo/vendor/github.com/gocraft/web.(*middlewareHandler).invoke(0xc000103890, 0x823900, 0xc00066ce40, 0x16, 0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:153 &#43;0x36e
+github.com/youtgo/vendor/github.com/gocraft/web.middlewareStack.func1(0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:144 &#43;0x18b
+github.com/youtgo/vendor/github.com/gocraft/web.LoggerMiddleware(0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/logger_middleware.go:16 &#43;0x88
+github.com/youtgo/vendor/github.com/gocraft/web.(*middlewareHandler).invoke(0xc000103860, 0x823900, 0xc00066ce40, 0x16, 0x948b40, 0xc00066cd80, 0xc00066cda0, 0xc00037d240)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:153 &#43;0x36e
+github.com/youtgo/vendor/github.com/gocraft/web.middlewareStack.func1(0x948b40, 0xc00066cd80, 0xc00066cda0)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:144 &#43;0x18b
+github.com/youtgo/vendor/github.com/gocraft/web.(*Router).ServeHTTP(0xc000105450, 0x943fc0, 0xc000184380, 0xc00063af00)
+	/home/john/.gvm/pkgsets/go1.13/global/src/github.com/youtgo/vendor/github.com/gocraft/web/router_serve.go:48 &#43;0x268
+net/http.serverHandler.ServeHTTP(0xc000184000, 0x943fc0, 0xc000184380, 0xc00063af00)
+	/home/john/.gvm/gos/go1.13/src/net/http</pre>
+      <h2>Request</h2>
+      <p><strong>Method:</strong> POST</p>
+      <h3>Parameters:</h3>
+      <ul>
+        
+      </ul>
+    </div>
+  </body>
+  </html>
+  

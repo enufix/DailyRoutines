@@ -1,5 +1,4 @@
 package com.example.myapplication;
-
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -40,6 +39,17 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(act3);
             }
         });
+
+
+        ImageView imageViewStatistics = (ImageView)findViewById(R.id.Statistics);
+        imageViewStatistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent act4 = new Intent(view.getContext(), StatisticsActivity.class);
+                startActivity(act4);
+            }
+        });
+
 
         /*  Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);*/
